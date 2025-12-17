@@ -1,0 +1,13 @@
+// 모바일 (767px 이하)
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// 노트북 (1339px 이하)
+@mixin notebook {
+  @media screen and (max-width: 1339px) {
+    @content;
+  }
+}

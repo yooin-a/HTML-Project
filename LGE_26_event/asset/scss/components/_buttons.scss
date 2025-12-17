@@ -1,0 +1,39 @@
+.btnPrecaution {
+  color: var(--ref-button-ess-btn);
+  font-size: 18px;
+  margin: 0 auto;
+  text-align: center;
+
+  object {
+    position: relative;
+    top: 5px;
+  }
+}
+
+.btnPrivacy {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 7px 16px;
+  background: var(--sys-color-surface);
+  color: var(--sys-color-main-variant3);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.btnAgree {
+  display: block;
+  padding: 16px 20px;
+  @include fixed-bottom;
+  background-color: var(--sys-color-background-variant);
+  z-index: 99999;
+
+  .arrowImg {
+    fill: var(--sys-color-ess-main);
+  }
+
+  button {
+    @include button-base;
+    width: 100%;
+    word-break: normal;
+  }
+}

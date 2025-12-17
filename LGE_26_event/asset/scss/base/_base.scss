@@ -1,0 +1,13 @@
+.wrap {
+  padding-bottom: 90px;
+}
+
+.contents {
+  padding: 0 20px;
+  text-align: center;
+
+  .info {
+    padding: 30px 0 32px;
+    color: var(--sys-color-on-surface-variant);
+  }
+}

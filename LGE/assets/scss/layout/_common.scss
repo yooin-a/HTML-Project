@@ -1,0 +1,44 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.dr_service_wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 82px 0 80px;
+  text-align: center;
+  line-height: 1.43;
+
+  @include mobile {
+    padding: 13.3333vw 0;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    line-height: inherit;
+
+    @include mobile {
+      font-size: 5.8333vw;
+      margin-bottom: 5vw;
+    }
+  }
+}
+
+.padding-side {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include mobile {
+    padding-left: 4.1667vw;
+    padding-right: 4.1667vw;
+  }
+}
+
+.mobile-show { display: none; }
+.desktop-show { display: block; }
+
+@include mobile {
+  .mobile-show { display: block; }
+  .desktop-show { display: none; }
+}

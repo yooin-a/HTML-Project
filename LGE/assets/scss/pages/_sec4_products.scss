@@ -1,0 +1,123 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.dr_service_sec4 {
+  background: $bg-mint;
+  overflow: hidden;
+
+  h2 {
+    @include mobile { margin-bottom: 6.25vw; }
+  }
+
+  .w1040 {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+
+    &:before {
+      content: "";
+      width: 210px;
+      height: 166px;
+      display: block;
+      background: url(../../sec4_left_bg.png) left bottom no-repeat; /* 경로 체크 */
+      position: absolute;
+      bottom: -64px;
+      left: 0;
+      @include mobile {
+        width: 22.2222vw;
+        height: 17.6389vw;
+        bottom: 2.5vw;
+        left: -6.6667vw;
+        background-size: 100% auto;
+        background-position: center center;
+      }
+    }
+    &:after {
+      content: "";
+      width: 188px;
+      height: 211px;
+      display: block;
+      background: url(../../sec4_right_bg.png) right top no-repeat; /* 경로 체크 */
+      position: absolute;
+      top: -63px;
+      right: 0;
+      @include mobile {
+        width: 18.8889vw;
+        height: 24.4444vw;
+        top: 27.7778vw;
+        right: -3.0556vw;
+        background-size: 100% auto;
+        background-position: center center;
+      }
+    }
+  }
+
+  .tabMenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @include mobile { margin-bottom: 8.3333vw; }
+
+    button {
+      border-radius: 25px;
+      background: #E2E2E2;
+      padding: 11px 25px 13px;
+      margin-right: 10px;
+      font-size: 18px;
+      transition: all .5s;
+      line-height: inherit;
+      &:last-child { margin-right: 0; }
+      @include mobile { padding: 1.5278vw 4.1667vw; margin-right: 1.3889vw; font-size: 3.8889vw; border-radius: 4.4444vw; }
+
+      &:hover, &.active { background: $hover-dark; color: #fff; }
+      &.active { font-weight: bold; }
+    }
+  }
+
+  .tabWrap {
+    display: flex;
+    margin-bottom: 29px;
+    justify-content: center;
+    @include mobile { margin-bottom: 4.5833vw; }
+
+    img {
+      margin-right: 19px;
+      @include mobile { display: block; margin-right: 3.0556vw; margin-bottom: 3.8889vw; width: 16.6667vw; &:nth-child(4) { margin-right: 0; } }
+      &:last-child { margin-right: 0; }
+    }
+    > div {
+      display: none;
+      &.active { display: block; }
+      > div { display: flex; justify-content: center; flex-wrap: wrap; }
+    }
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 35px;
+    min-height: 48.61px;
+    @include mobile { font-size: 3.7vw; margin-top: 5.8333vw; min-height: 10.4541vw; }
+    span { display: block; font-size: 14px; color: #666; @include mobile { font-size: 3.6111vw; } }
+  }
+
+  ul {
+    font-size: 14px;
+    color: #666;
+    @include mobile { font-size: 3.6111vw; text-align: left; }
+  }
+
+  .text-list {
+    li {
+      padding: 0;
+      @include mobile { padding-left: 2.0833vw; }
+      &:before {
+        content: "·";
+        position: relative;
+        margin-right: 5px;
+        @include mobile { position: absolute; margin: 0; left: 0; }
+      }
+    }
+  }
+}

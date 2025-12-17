@@ -1,0 +1,49 @@
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin bullet-point($width: 3px, $height: 3px, $background: var(--sys-on-surface), $left: 0, $top: 10px, $radius: 50%, $display: block) {
+  content: '';
+  display: $display; // Added display parameter
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background: $background;
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+@mixin button-base($display: block, $padding: 11px 12px 12px, $background: var(--sys-color-ess-main), $color: #ffffff, $border-radius: 5px, $font-size: 17px) {
+  display: $display;
+  padding: $padding;
+  background-color: $background;
+  color: $color;
+  border-radius: $border-radius;
+  font-size: $font-size;
+}
+
+@mixin fixed-bottom($left: 0, $width: 100%, $bottom: 0) {
+  position: fixed;
+  bottom: $bottom;
+  width: $width;
+  left: $left;
+}
+
+@mixin max-width-center($max-width: 100%) {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin abs-center-x($width) {
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-#{$width} / 2);
+}

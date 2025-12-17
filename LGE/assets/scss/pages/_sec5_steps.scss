@@ -1,0 +1,134 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.dr_service_sec5 {
+  h2 { margin-bottom: 0; }
+
+  .slide-step {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto 14px;
+    position: relative;
+    background: url(../../sec5_bg_img.png) center center no-repeat; /* 경로 체크 */
+    @include mobile { margin-bottom: 2.2222vw; background-size: 97.5vw auto; background-position-x: 4.1667vw; }
+
+    .slide-frame {
+      display: inline-flex;
+      margin: 62px auto;
+      position: relative;
+      z-index: 3;
+      @include mobile { margin: 12.3611vw auto; }
+
+      .img-frame { display: block; width: 100%; z-index: 5; @include mobile { width: 44.4444vw; } }
+
+      .effect-shadow {
+        position: absolute;
+        width: 89.72%;
+        height: 94.86%;
+        margin: 5.14%;
+        border-radius: 30px;
+        box-sizing: border-box;
+        box-shadow: -10px 10px 50px 0 rgba(0, 0, 0, .5);
+        z-index: 4;
+        @include mobile { box-shadow: -1.3889vw 1.3889vw 6.9444vw 0 rgba(0, 0, 0, .5); }
+      }
+    }
+
+    .slide {
+      position: absolute;
+      display: flex;
+      margin: 5.14%;
+      border-radius: 30px;
+      overflow: hidden;
+      z-index: 6;
+      @include mobile { border-radius: 3.4722vw; }
+
+      li {
+        width: 100%;
+        flex: 1 0 auto;
+        &:first-child { transition: margin-left .5s; }
+        img { display: block; width: 100%; height: 100%; }
+      }
+    }
+
+    .slider-arrow {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      @include mobile { img { width: 8.3333vw; } }
+
+      button {
+        &.off { display: none; }
+        &.btn-left { position: absolute; left: 0; @include mobile { left: 3.0556vw; } }
+        &.btn-right { position: absolute; right: 0; @include mobile { right: 3.0556vw; } }
+      }
+    }
+  }
+
+  .info {
+    font-size: 20px;
+    margin-bottom: 48px;
+    @include mobile { font-size: 3.8889vw; min-height: 11.8055vw; margin-bottom: 10.5556vw; }
+    span {
+      font-size: 13px;
+      margin: 0 5px;
+      vertical-align: middle;
+      @include mobile { display: inline-flex; align-items: center; font-size: 1.8vw; height: 5.6944vw; margin: 0 0.8333vw; vertical-align: bottom; }
+    }
+  }
+
+  .tablist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include mobile { flex-wrap: wrap; justify-content: flex-start; }
+
+    button {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 0 43px 43px 0;
+      background: #F6F6F6;
+      box-sizing: border-box;
+      padding: 17px 0 17px 26px;
+      text-align: left;
+      font-size: 16px;
+      color: $text-color;
+      margin-left: 8px;
+      transition: all .5s;
+      line-height: inherit;
+      &:first-child { margin-left: 0; }
+
+      @include mobile {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        border-radius: 0 10.4167vw 10.4167vw 0;
+        max-width: none;
+        width: calc(33% - 1vw);
+        height: 21.9444vw;
+        box-sizing: border-box;
+        padding: 0 3.4028vw 0 2.7777vw;
+        margin-left: 1.5277vw;
+        margin-bottom: 1.6667vw;
+        font-size: 3.6111vw;
+        &:nth-child(4) { margin-left: 0; }
+        &:nth-child(4), &:nth-child(5) { margin-bottom: 0; }
+      }
+
+      h3 {
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 8px;
+        @include mobile { font-size: 3.3333vw; margin-bottom: 1.8055vw; }
+      }
+
+      &.active { background: #FFDCDC; color: #000; }
+    }
+  }
+}

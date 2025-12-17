@@ -1,0 +1,66 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.dr_service_sec3 {
+  h2 {
+    font-size: 40px;
+    @include mobile { font-size: 6.6667vw; }
+    span { color: $point-color; }
+  }
+
+  h2 + p {
+    font-size: 20px;
+    margin-bottom: 65px;
+    @include mobile { font-size: 3.8889vw; margin-bottom: 0; }
+  }
+
+  .homeWrap {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto 40px;
+    @include mobile { margin-bottom: 13.3333vw; }
+
+    .home-img {
+      &.desktop-show {
+        display: block;
+        margin: 0 auto;
+        width: 89.75%;
+        @include mobile { display: none; }
+      }
+      @include mobile { width: 100%; }
+    }
+
+    .phone-img {
+      &.desktop-show {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 35.41%;
+        @include mobile { display: none; }
+      }
+      &.mobile-show {
+        @include mobile {
+          position: relative;
+          display: block;
+          width: 100%;
+          margin-bottom: -30.4167vw;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  dl {
+    dt {
+      font-size: 32px;
+      margin-bottom: 20px;
+      @include mobile { font-size: 5.8333vw; margin-bottom: 2.7778vw; }
+    }
+    dd {
+      font-size: 20px;
+      @include mobile { font-size: 3.7vw; }
+    }
+  }
+}
