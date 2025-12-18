@@ -1,0 +1,28 @@
+// Light Mode (Default)
+:root {
+  --sys-color-background-variant: #EFF1F4;
+  --sys-color-surface: #ffffff;
+  --sys-on-surface: #111111;
+  --sys-color-on-surface-variant: #606C80;
+  --sys-color-ess-main: #00867E;
+  --sys-color-outline: #CAD0DD;
+  --ref-button-ess-btn: #006A63;
+  --ref-multi-color-teal-green-teal-green97: #E5FBF8;
+  --ref-color-neutral99: #F7F8FA;
+  --sys-color-main-variant3: $color-primary;
+}
+
+// Dark Mode Override
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sys-color-background-variant: #202020;
+    --sys-color-surface: #2E3133;
+    --sys-on-surface: #ffffff;
+    --sys-color-on-surface-variant: #A1ACBF;
+    --sys-color-ess-main: #02B3A9;
+    --sys-color-outline: #606C80;
+    --ref-button-ess-btn: #01A298;
+    --ref-multi-color-teal-green-teal-green97: #00201d;
+    --sys-color-main-variant3: #ffffff;
+  }
+}

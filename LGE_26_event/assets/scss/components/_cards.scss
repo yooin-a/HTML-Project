@@ -1,0 +1,104 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+.contents {
+  .card {
+    background-color: var(--sys-color-surface);
+    padding: 30px 20px;
+    border-radius: 10px;
+    position: relative;
+
+    h2 {
+      width: 175px;
+      color: var(--sys-color-ess-main);
+      font-size: rem(18);
+      line-height: 34px;
+      border-radius: 25px;
+      border: 1.5px solid var(--sys-color-ess-main);
+      margin: 0 auto 25px;
+      font-weight: 500;
+    }
+
+    .steplist {
+      margin-bottom: 30px;
+
+      b {
+        font-size: rem(16);
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 900;
+      }
+
+      .agreeAlertImg {
+        padding: 8px 20px 0;
+        background: rgba(178, 230, 224, .2);
+
+        img {
+          width: 100%;
+          max-width: 246px;
+        }
+      }
+
+      &.step03 {
+        margin-bottom: 0;
+
+        ul {
+          border-top: 0.5px solid var(--sys-color-outline);
+          padding: 12px 0 0 20px;
+          font-size: rem(14);
+
+          li {
+            width: 100%;
+            max-width: 278px;
+            margin: 0 auto;
+            text-align: left;
+            position: relative;
+
+            &:before {
+              @include bullet-point($width: 3px, $height: 3px, $background: var(--sys-on-surface), $left: -10px, $top: 7px, $radius: 50%, $display: inline-block);
+            }
+
+            b {
+              font-size: rem(14);
+              display: inline;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    .stepText {
+      width: 100%;
+      max-width: 278px;
+      margin: 0 auto;
+      font-size: rem(16);
+      font-weight: 500;
+    }
+
+    p mark {
+      color: var(--sys-color-ess-main);
+    }
+
+    .step-info {
+      display: block;
+      color: var(--sys-color-on-surface-variant);
+      font-size: rem(14);
+      margin: 8px auto 10px;
+      width: 100%;
+      max-width: 278px;
+    }
+  }
+
+  .cardList01 {
+    padding-top: 50px;
+    margin-bottom: 20px;
+
+    .energySenseImg {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      margin-left: -75px;
+    }
+  }
+}

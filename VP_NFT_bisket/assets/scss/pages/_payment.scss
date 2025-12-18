@@ -1,0 +1,79 @@
+@use '../abstracts/functions' as *;
+
+.payment {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+
+  >h1 {
+    margin: 30px auto;
+  }
+
+  .num {
+    font-size: rem(22);
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .box {
+    box-sizing: border-box;
+    border: 1px solid $gray-medium;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+    background: $bg-light;
+
+    dl {
+      border-top: 1px dashed $gray-medium;
+      box-sizing: border-box;
+      padding: 15px 30px;
+
+      dt {
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 5px;
+      }
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+
+  .title {
+    font-size: rem(18);
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 15px;
+      background: $black;
+      border-radius: 2px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  .button-wrap {
+    @media screen and (min-width: 320px) and (max-width: 680px) {
+      margin-top: 0;
+    }
+  }
+}

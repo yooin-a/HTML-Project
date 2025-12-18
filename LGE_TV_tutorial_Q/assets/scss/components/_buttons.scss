@@ -1,0 +1,22 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.fixeBtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: $color-bg-base;
+  text-align: center;
+
+  a {
+    display: block;
+    background: $color-primary;
+    color: #fff;
+    font-size: rem(16);
+    font-weight: 500;
+    padding: 15px 12px 14px;
+    border-radius: 10px;
+  }
+}

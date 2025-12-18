@@ -1,0 +1,253 @@
+@use '../abstracts/functions' as *;
+
+.form-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+
+  .title {
+    font-size: rem(18);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  div {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+    input[type="text"],
+    input[type="password"] {
+      background: url() $white;
+      border: 1px solid $gray-medium;
+      border-radius: 30px;
+      box-sizing: border-box;
+      padding: 10px 15px;
+      height: 45px;
+      width: 100%;
+      font-family: $font-roboto;
+      color: $gray-dark;
+      transition: all ease .3s;
+
+      &:hover {
+        background-color: $bg-hover;
+      }
+    }
+
+    ul {
+      width: 100%;
+      overflow: hidden;
+
+      li {
+        display: block;
+        width: 50%;
+        float: left;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          margin-bottom: 0;
+          width: 0;
+          height: 0;
+
+          &:checked+label {
+            color: $white;
+            background: $black;
+            font-weight: bold;
+            border-color: $black;
+          }
+        }
+
+        label {
+          border: 1px solid $gray-medium;
+          width: 100%;
+          display: block;
+          box-sizing: border-box;
+          height: 45px;
+          line-height: 43px;
+          color: $gray-dark;
+          border-radius: 30px;
+        }
+
+        &:hover label {
+          background-color: $bg-hover;
+        }
+      }
+    }
+
+    &.telecom-area,
+    &.authNum-area {
+      .inner {
+        border-radius: 30px;
+        box-sizing: border-box;
+        border: 1px solid $gray-medium;
+        height: 45px;
+        line-height: 43px;
+        padding: 0 20px;
+        overflow: hidden;
+        vertical-align: middle;
+        width: calc(100% - 155px);
+        position: relative;
+        background-color: transparent;
+        transition: all ease .3s;
+
+        &:hover {
+          background-color: $bg-hover;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 45px;
+        color: $white;
+        background-color: #999;
+        border-radius: 30px;
+        text-align: center;
+        box-sizing: border-box;
+        margin-left: 5px;
+        line-height: 45px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          background: $gray-dark;
+        }
+      }
+    }
+
+    &.telecom-area {
+      float: none;
+      width: 100%;
+
+      select {
+        background: url(../images/select-arrow.png) 95% center no-repeat transparent;
+        background-size: 12px;
+        border: 0;
+        width: 100px;
+        font-family: $font-roboto;
+        color: $gray-dark;
+        float: left;
+        height: 43px;
+
+        &#phoneNum1 {
+          text-indent: 10px;
+        }
+      }
+
+      input {
+        width: calc(100% - 200px);
+        border: 0;
+        height: 43px;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 20px;
+        background-color: transparent;
+      }
+    }
+
+    &.authNum-area {
+      width: 100%;
+      padding-left: 0;
+
+      span {
+        color: #ff0000;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-weight: 300;
+      }
+
+      input {
+        width: 100%;
+        border: 0;
+        height: 43px;
+        box-sizing: border-box;
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+
+    &.join-certi {
+      width: 100%;
+      overflow: hidden;
+
+      ul li {
+        width: 33.333%;
+        float: left;
+        text-align: center;
+      }
+    }
+  }
+
+  >div:nth-child(odd) {
+    padding-left: 5px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 680px) {
+    div {
+      &.telecom-area .inner,
+      &.authNum-area .inner {
+        width: 100%;
+      }
+
+      &.telecom-area button,
+      &.authNum-area button {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      ul li label,
+      &.telecom-area input,
+      &.telecom-area button,
+      &.authNum-area button,
+      &.authNum-area input {
+        font-size: rem(14);
+      }
+
+      &.telecom-area select {
+        font-size: rem(14);
+        width: 90px;
+      }
+
+      &.telecom-area input {
+        padding: 0 5px
+      }
+    }
+  }
+}
+
+.button-wrap {
+  margin-bottom: 100px;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: $white;
+    background: $black;
+    box-sizing: border-box;
+    font-size: rem(22);
+    border-radius: 30px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 680px) {
+    margin-top: -30px;
+    margin-bottom: 50px;
+
+    a {
+      font-size: rem(18);
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+}

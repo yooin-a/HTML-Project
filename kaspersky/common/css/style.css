@@ -165,20 +165,20 @@
 	line-height: 40px;
 }
 .subWrap .subTop dl.title-exchange {
-	background: url(/images/sub/exchange-title-img.png) right center no-repeat;
+	background: url(../../images/sub/exchange-title-img.png) right center no-repeat;
 }
 .subWrap .subTop dl.title-phoneNumber {
-	background: url(/images/sub/phoneNumber-title-img.png) right center no-repeat;
+	background: url(../../images/sub/phoneNumber-title-img.png) right center no-repeat;
 }
 .subWrap .subTop dl.title-mypage {
-	background: url(/images/sub/mypage-title-img.png) right center no-repeat;
+	background: url(../../images/sub/mypage-title-img.png) right center no-repeat;
 }
 .subWrap .subTop dl.title-renewal {
-	background: url(/images/sub/renewal-title-img.png) right center no-repeat;
+	background: url(../../images/sub/renewal-title-img.png) right center no-repeat;
 	background-size: 76.4px;
 }
 .subWrap .subTop dl.title-agree {
-	background: url(/images/sub/agree-title-img.png) right center no-repeat;
+	background: url(../../images/sub/agree-title-img.png) right center no-repeat;
 	background-size: 65px;
 }
 .subWrap .subTop dl dt {
@@ -252,7 +252,7 @@
 	top:-1px;
 	width:30px;
 	height:30px;
-	background:url(/images/sub/chk-off.png) center center no-repeat;
+	background:url(../../images/sub/chk-off.png) center center no-repeat;
 	background-size: 28px;
 }
 
@@ -263,7 +263,7 @@
 	left:0;
 	width:30px;
 	height:30px;
-	background:url(/images/sub/chk-on.png) center center no-repeat;
+	background:url(../../images/sub/chk-on.png) center center no-repeat;
 	background-size: 28px;
 }
 
@@ -510,7 +510,7 @@
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background: url(/images/sub/arrow-down.png) no-repeat 90% 50%;
+	background: url(../../images/sub/arrow-down.png) no-repeat 90% 50%;
 	color: #000;
 }
 

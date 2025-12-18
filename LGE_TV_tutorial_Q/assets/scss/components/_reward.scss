@@ -1,0 +1,52 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.thinQ_TV_reward {
+  text-align: center;
+  padding: 32px 0 40px;
+
+  h1 {
+    font-weight: 500;
+    font-size: rem(20);
+    color:$color-text-dim;
+    margin-bottom: 16px;
+
+    b {
+      color: #000;
+      font-size: rem(22);
+    }
+
+    mark {
+      color: $color-point;
+    }
+  }
+
+  .coin {
+    width: 201px;
+    margin:0 auto 20px;
+    display: block;
+  }
+
+  p {
+    color: $color-text-sub;
+    font-size: rem(14);
+    margin-bottom: 13px;
+  }
+
+  ul {
+    li {
+      margin-bottom: 20px;
+      font-size: rem(18);
+
+      b {
+        display: block;
+        font-size: rem(14);
+        margin-bottom: 3px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

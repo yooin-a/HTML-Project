@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /* 모바일 터치 하이라이트 제거 */
+  -webkit-tap-highlight-color: transparent; 
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sys-color-ess-main, #00867E); /* 변수 없으면 기본색 */
+  outline-offset: 2px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+mark {
+  background-color: transparent;
+}

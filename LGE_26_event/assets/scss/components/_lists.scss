@@ -1,0 +1,161 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+.productList {
+  > li {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 20px 0 14px;
+    align-items: center;
+    border-bottom: 0.5px solid var(--sys-color-outline);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 5px;
+    }
+
+    div {
+      p {
+        font-size: rem(20);
+        font-weight: 500;
+        color: var(--sys-color-ess-main);
+        margin-bottom: 5px;
+
+        img {
+          width: 32px;
+          margin-left: 10px;
+        }
+      }
+
+      span {
+        display: block;
+        letter-spacing: -0.1px;
+
+        b {
+          display: block;
+          font-weight: 500;
+        }
+      }
+
+      &:last-child {
+        text-align: center;
+        font-weight: 500;
+        color: var(--sys-color-ess-main);
+        padding-left: 20px;
+      }
+
+      .productImg {
+        width: 65px;
+        display: block;
+      }
+    }
+
+    &.detailinfo {
+      display: block;
+      width: 100%;
+      padding: 12px 0 0 10px;
+      letter-spacing: -0.28px;
+      font-size: rem(14);
+      color: var(--sys-color-on-surface);
+      position: relative;
+
+      &::before {
+        @include bullet-point($width: 3px, $height: 3px, $background: var(--sys-on-surface), $left: 0, $top: 21px, $radius: 50%, $display: inline-block);
+      }
+    }
+  }
+}
+
+/* 자주 묻는 질문 */
+.qnaList {
+  margin: 50px auto;
+
+  h2 {
+    width: 175px;
+    color: var(--sys-on-surface);
+    font-size: rem(18);
+    line-height: 34px;
+    border-radius: 25px;
+    border: 1px solid var(--sys-on-surface);
+    margin: 0 auto 25px;
+    font-weight: 500;
+    background-color: var(--sys-color-surface);
+  }
+
+  dl {
+    background-color: var(--sys-color-surface);
+    border-radius: 10px;
+    margin-top: 12px;
+    text-align: left;
+    padding-bottom: 2px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    dt,
+    dd {
+      position: relative;
+    }
+
+    dt {
+      padding: 12px 48px 10px 45px;
+
+      &::before {
+        content: "Q.";
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 12px;
+        font-weight: bold;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/ic_chevron_up.svg) center center no-repeat;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -5px;
+        rotate: -180deg;
+        transition-duration: 0.2s;
+      }
+
+      &.active::after {
+        rotate: 0deg;
+      }
+    }
+
+    dd {
+      padding: 10px 20px 10px 45px;
+
+      &::before {
+        content: "A.";
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-weight: bold;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: calc(100% - 40px);
+        height: .5px;
+        background-color: var(--sys-color-outline);
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+    }
+  }
+}

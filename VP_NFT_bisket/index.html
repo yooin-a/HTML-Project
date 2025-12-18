@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BISKET x VP</title>
-    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
@@ -17,7 +17,7 @@
         <section class="product-wrap">
           <p class="title">NFT 아트 상품 정보</p>
           <div class="detail">
-            <div class="thumbnail"><img src="./images/thumb.png" alt=""></div>
+            <div class="thumbnail"><img src="./assets/images/thumb.png" alt=""></div>
             <ul class="info">
               <li><b>작품명</b>NFT Art Gallery In ANDAZ X BISKET</li>
               <li><b>작가명</b>레지나 킴</li>
@@ -33,46 +33,7 @@
             </ul>
           </div>
         </section>
-        <script>
-          $(document).ready(function(){
 
-            $('.box').each(function(){
-                var content = $(this).children('.explanation .con');
-                var content_txt = content.text();
-                var content_txt_short = content_txt.substring(0,80)+"...";
-                var btn_more = $('<a href="javascript:void(0)" class="more"><span class="hidden">더보기</span></a>');
-
-                
-                $(this).append(btn_more);
-                
-                if(content_txt.length >= 100){
-                    content.html(content_txt_short)
-                    
-                }else{
-                    btn_more.hide()
-                }
-                
-                btn_more.click(toggle_content);
-                // 아래 bind가 안 되는 이유는??
-                // btn_more.bind('click',toggle_content);
-
-                function toggle_content(){
-                    if($(this).hasClass('short')){
-                        // 접기 상태
-                        //$(this).html('더보기');
-                        content.html(content_txt_short)
-                        $(this).removeClass('short');
-                    }else{
-                        // 더보기 상태
-                        //$(this).html('접기');
-                        content.html(content_txt);
-                        $(this).addClass('short');
-
-                    }
-                }
-            });
-          });          
-        </script>
 
         <section class="form-wrap">
           <p class="title">구매자 본인인증</p>
@@ -251,36 +212,7 @@
 
 
     </div><!-- //wrap -->
+    <script src="./assets/js/common.js"></script>
   </body>
 </html>
-
-<script>
-  //*약관동의 > 체크박스
-  $('.chkbox_group').on('click', '#chk_all', function() {
-    console.log(this);
-    const checked = $(this).is(':checked');
-
-    if (checked) {
-      $(this).parents('.chkbox_group').find('input').prop('checked', true);
-    } else {
-      $(this).parents('.chkbox_group').find('input').prop('checked', false);
-    }
-  });
-
-  $('.chkbox_group').on('click', '.chk', function() {
-    let is_checked = true;
-
-    $('.chkbox_group .chk').each(function() {
-      is_checked = is_checked && $(this).is(':checked');
-    });
-
-    $('#chk_all').prop('checked', is_checked);
-  });
-
-  //*약관동의 > iframe
-  $('.view_more').click(function(){
-    $(this).toggleClass('active');
-    $(this).siblings('.iframe-wrap').slideToggle(0);
-  }); 
-</script>
 
